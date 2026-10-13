@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --canvas-bg: #F5FAFE;
+  --sidebar-bg: #E6F1FA;
+  --card-bg: #FFFFFF;
+  --nested-bg: #EEF6FC;
+  --border-subtle: #D5E5F2;
+  --primary-sky: #0284C7;
+  --hover-sky: #0369A1;
+  --main-text: #25344A;
+  --muted-text: #66758A;
+  --success: #248568;
+  --info: #4779C7;
+  --error: #C84B50;
+
+  --background: #F5FAFE;
+  --foreground: #25344A;
+  --card: #FFFFFF;
+  --card-foreground: #25344A;
+  --popover: #FFFFFF;
+  --popover-foreground: #25344A;
+  --primary: #0284C7;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EEF6FC;
+  --secondary-foreground: #25344A;
+  --muted: #EEF6FC;
+  --muted-foreground: #66758A;
+  --accent: #EEF6FC;
+  --accent-foreground: #25344A;
+  --destructive: #C84B50;
+  --destructive-foreground: #FFFFFF;
+  --border: #D5E5F2;
+  --input: #D5E5F2;
+  --ring: #0284C7;
+  --radius: 0.85rem;
+}
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-canvas: #F5FAFE;
+  --color-sidebar-bg: #E6F1FA;
+  --color-card-bg: #FFFFFF;
+  --color-nested: #EEF6FC;
+  --color-border-subtle: #D5E5F2;
+  --color-primary-sky: #0284C7;
+  --color-hover-sky: #0369A1;
+  --color-main-text: #25344A;
+  --color-muted-text: #66758A;
+  --color-brand-success: #248568;
+  --color-brand-info: #4779C7;
+  --color-brand-error: #C84B50;
+  --radius: 0.85rem;
+}
+
+body {
+  background-color: #F5FAFE;
+  color: #25344A;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(102, 117, 138, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 117, 138, 0.45);
+}

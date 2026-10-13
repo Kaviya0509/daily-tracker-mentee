@@ -1,0 +1,28 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users — read own profile, create own profile on registration
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+      allow update, delete: if false;
+    }
+
+    // Mentee Reports — full CRUD on own reports only
+    match /menteeReports/{reportId} {
+      allow read: if request.auth != null && resource.data.menteeUid == request.auth.uid;
+      allow create: if request.auth != null && request.resource.data.menteeUid == request.auth.uid;
+      allow update: if request.auth != null
+        && resource.data.menteeUid == request.auth.uid
+        && request.resource.data.menteeUid == request.auth.uid;
+      allow delete: if false;
+    }
+
+    // Deny everything else
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
