@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -5,12 +6,13 @@ import {
   Navigate,
 } from "react-router-dom";
 import { useAuth } from "./hooks/useAuth";
-import MenteeLoginPage from "./pages/MenteeLoginPage";
-import MenteeRegisterPage from "./pages/MenteeRegisterPage";
-import DailyStatusFormPage from "./pages/DailyStatusFormPage";
-import MyReportsPage from "./pages/MyReportsPage";
 import { Toaster } from "@/components/ui/sonner";
 import { Loader2 } from "lucide-react";
+
+const MenteeLoginPage = lazy(() => import("./pages/MenteeLoginPage"));
+const MenteeRegisterPage = lazy(() => import("./pages/MenteeRegisterPage"));
+const DailyStatusFormPage = lazy(() => import("./pages/DailyStatusFormPage"));
+const MyReportsPage = lazy(() => import("./pages/MyReportsPage"));
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -51,41 +53,43 @@ function PublicRoute({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/login"
-          element={
-            <PublicRoute>
-              <MenteeLoginPage />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <PublicRoute>
-              <MenteeRegisterPage />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="/form"
-          element={
-            <ProtectedRoute>
-              <DailyStatusFormPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/my-reports"
-          element={
-            <ProtectedRoute>
-              <MyReportsPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route
+            path="/login"
+            element={
+              <PublicRoute>
+                <MenteeLoginPage />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <PublicRoute>
+                <MenteeRegisterPage />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/form"
+            element={
+              <ProtectedRoute>
+                <DailyStatusFormPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/my-reports"
+            element={
+              <ProtectedRoute>
+                <MyReportsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </Suspense>
       <Toaster />
     </BrowserRouter>
   );
