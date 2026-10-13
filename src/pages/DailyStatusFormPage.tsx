@@ -390,7 +390,7 @@ export default function DailyStatusFormPage() {
   return (
     <div className="min-h-screen bg-[#F5FAFE] text-[#25344A] font-sans antialiased flex flex-col lg:flex-row">
       {/* Left Sidebar */}
-      <aside className="w-full lg:w-60 bg-[#E6F1FA] border-b lg:border-b-0 lg:border-r border-[#D5E5F2] flex flex-col lg:min-h-screen lg:sticky lg:top-0 shrink-0">
+      <aside className="hidden lg:flex w-60 bg-[#E6F1FA] border-r border-[#D5E5F2] flex-col min-h-screen sticky top-0 shrink-0">
         {/* Brand / Logo */}
         <div className="px-6 py-5 border-b border-[#D5E5F2]">
           <div className="flex items-center gap-3">
@@ -471,7 +471,7 @@ export default function DailyStatusFormPage() {
       </aside>
 
       {/* Main Content Area */}
-      <div className="flex-1 min-h-screen flex flex-col">
+      <div className="flex-1 min-w-0 min-h-screen flex flex-col">
         {/* Top Header Bar */}
         <header className="bg-transparent border-b border-[#D5E5F2] sticky top-0 z-30 backdrop-blur-xs">
           <div className="px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
@@ -1126,7 +1126,7 @@ export default function DailyStatusFormPage() {
       {/* Detail View Modal for Recent Submissions */}
       {previewReport && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in">
-          <div className="bg-[#FFFFFF] rounded-3xl max-w-2xl w-full border border-[#D5E5F2] shadow-2xl overflow-hidden animate-in zoom-in-95">
+          <div className="bg-[#FFFFFF] rounded-3xl max-w-2xl w-full border border-[#D5E5F2] shadow-2xl max-h-[92vh] overflow-y-auto animate-in zoom-in-95">
             {/* Header */}
             <div className="bg-linear-to-r from-[#0284C7] to-[#0369A1] text-white p-5 flex items-center justify-between">
               <div className="flex items-center gap-2.5">

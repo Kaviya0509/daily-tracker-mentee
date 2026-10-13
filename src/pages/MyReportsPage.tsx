@@ -21,6 +21,7 @@ import {
   CalendarDays,
   Lightbulb,
   Lock,
+  Activity,
 } from "lucide-react";
 
 import { useAuth } from "../hooks/useAuth";
@@ -325,7 +326,7 @@ export default function MyReportsPage() {
   return (
     <div className="min-h-screen bg-[#F5FAFE] text-[#25344A] font-sans antialiased flex flex-col lg:flex-row">
       {/* Left Sidebar */}
-      <aside className="w-full lg:w-60 bg-[#E6F1FA] border-b lg:border-b-0 lg:border-r border-[#D5E5F2] flex flex-col lg:min-h-screen lg:sticky lg:top-0 shrink-0">
+      <aside className="hidden lg:flex w-60 bg-[#E6F1FA] border-r border-[#D5E5F2] flex-col min-h-screen sticky top-0 shrink-0">
         {/* Brand / Logo */}
         <div className="px-6 py-5 border-b border-[#D5E5F2]">
           <div className="flex items-center gap-3">
@@ -406,10 +407,16 @@ export default function MyReportsPage() {
       </aside>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-h-screen">
+      <div className="flex-1 min-w-0 flex flex-col min-h-screen">
         {/* Top Header */}
-        <header className="bg-transparent px-6 sm:px-10 py-4 flex items-center justify-between gap-4">
-          <div className="flex-1" />
+        <header className="bg-transparent px-4 sm:px-8 lg:px-10 py-3 sm:py-4 flex items-center justify-between gap-4">
+          <div className="flex lg:hidden items-center gap-2.5">
+            <div className="h-9 w-9 rounded-xl bg-linear-to-br from-[#0284C7] to-[#0369A1] flex items-center justify-center shadow-sm shrink-0">
+              <Activity className="h-4 w-4 text-white" />
+            </div>
+            <span className="text-sm font-bold text-[#25344A]">Mentee</span>
+          </div>
+          <div className="hidden lg:block flex-1" />
 
           <div className="flex items-center gap-4">
             {/* Notification Bell */}
@@ -442,8 +449,28 @@ export default function MyReportsPage() {
           </div>
         </header>
 
+        {/* Mobile Nav */}
+        <div className="lg:hidden flex items-center gap-1 px-4 py-2 bg-[#E6F1FA] border-y border-[#D5E5F2] overflow-x-auto">
+          {NAV_ITEMS.map((item) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <button
+                key={item.path}
+                onClick={() => navigate(item.path)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${isActive
+                  ? "bg-[#FFFFFF] text-[#0284C7] border border-[#D5E5F2]"
+                  : "text-[#25344A] hover:bg-[#EEF6FC] border border-transparent"
+                  }`}
+              >
+                <item.icon className={`h-3.5 w-3.5 ${isActive ? "text-[#0284C7]" : "text-[#66758A]"}`} />
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+
         {/* Content Body */}
-        <main className="flex-1 px-4 sm:px-8 lg:px-10 pb-10 space-y-6 w-full">
+        <main className="flex-1 px-4 sm:px-8 lg:px-10 pb-10 pt-4 lg:pt-0 space-y-6 w-full">
           {/* Hero Banner: Warm brand orange/amber gradient */}
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-linear-to-r from-[#0284C7] via-[#0391D6] to-[#0369A1] text-white p-6 sm:p-9 shadow-md">
             {/* Diagonal ambient highlight */}
@@ -853,7 +880,7 @@ export default function MyReportsPage() {
       {/* Interactive Report View Modal Dialog */}
       {selectedReport && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in">
-          <div className="bg-[#FFFFFF] rounded-3xl max-w-2xl w-full border border-[#D5E5F2] shadow-2xl overflow-hidden animate-in zoom-in-95">
+          <div className="bg-[#FFFFFF] rounded-3xl max-w-2xl w-full border border-[#D5E5F2] shadow-2xl max-h-[92vh] overflow-y-auto animate-in zoom-in-95">
             {/* Modal Header */}
             <div className="bg-linear-to-r from-[#0284C7] to-[#0369A1] text-white p-5 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
