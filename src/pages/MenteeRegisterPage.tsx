@@ -38,7 +38,7 @@ function LeafLogo({ className = "h-11 w-11" }: { className?: string }) {
         {/* Warm Golden Leaf Silhouette */}
         <path
           d="M24 4C24 4 10 14 10 27C10 35 16 41 24 41C32 41 38 35 38 27C38 14 24 4 24 4Z"
-          fill="#C58211"
+          fill="#0284C7"
         />
         {/* Center stem vein cut */}
         <line x1="24" y1="39" x2="24" y2="9" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
@@ -68,11 +68,11 @@ function WatermarkLeaf({ className = "h-4 w-4" }: { className?: string }) {
           d="M24 4C24 4 10 14 10 27C10 35 16 41 24 41C32 41 38 35 38 27C38 14 24 4 24 4Z"
           fill="white"
         />
-        <line x1="24" y1="39" x2="24" y2="9" stroke="#9A6208" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="24" y1="31" x2="16" y2="27" stroke="#9A6208" strokeWidth="2.2" strokeLinecap="round" />
-        <line x1="24" y1="23" x2="15" y2="19" stroke="#9A6208" strokeWidth="2.2" strokeLinecap="round" />
-        <line x1="24" y1="31" x2="32" y2="27" stroke="#9A6208" strokeWidth="2.2" strokeLinecap="round" />
-        <line x1="24" y1="23" x2="33" y2="19" stroke="#9A6208" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="24" y1="39" x2="24" y2="9" stroke="#075985" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="24" y1="31" x2="16" y2="27" stroke="#075985" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="24" y1="23" x2="15" y2="19" stroke="#075985" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="24" y1="31" x2="32" y2="27" stroke="#075985" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="24" y1="23" x2="33" y2="19" stroke="#075985" strokeWidth="2.2" strokeLinecap="round" />
       </g>
     </svg>
   );
@@ -138,7 +138,7 @@ export default function MenteeRegisterPage() {
                     className="w-8 h-8"
                     viewBox="0 0 32 32"
                     fill="none"
-                    stroke="#F59E0B"
+                    stroke="#0EA5E9"
                     strokeWidth="3.2"
                     strokeLinecap="round"
                   >
@@ -160,7 +160,7 @@ export default function MenteeRegisterPage() {
               >
                 <path
                   d="M3 11C65 3 155 3 217 10"
-                  stroke="#EAB308"
+                  stroke="#38BDF8"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
@@ -208,7 +208,7 @@ export default function MenteeRegisterPage() {
                     id="displayName"
                     type="text"
                     placeholder="Full name (e.g. Alex Johnson)"
-                    className="pl-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#C58211] focus:ring-[#C58211]/20 transition-all"
+                    className="pl-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#0284C7] focus:ring-[#0284C7]/20 transition-all"
                     {...register("displayName")}
                   />
                 </div>
@@ -225,7 +225,7 @@ export default function MenteeRegisterPage() {
                     id="email"
                     type="email"
                     placeholder="Email address"
-                    className="pl-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#C58211] focus:ring-[#C58211]/20 transition-all"
+                    className="pl-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#0284C7] focus:ring-[#0284C7]/20 transition-all"
                     {...register("email")}
                   />
                 </div>
@@ -242,7 +242,7 @@ export default function MenteeRegisterPage() {
                     id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="Password (min 6 characters)"
-                    className="pl-10 pr-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#C58211] focus:ring-[#C58211]/20 transition-all"
+                    className="pl-10 pr-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#0284C7] focus:ring-[#0284C7]/20 transition-all"
                     {...register("password")}
                   />
                   <button
@@ -266,7 +266,7 @@ export default function MenteeRegisterPage() {
                     id="confirmPassword"
                     type={showConfirmPassword ? "text" : "password"}
                     placeholder="Confirm password"
-                    className="pl-10 pr-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#C58211] focus:ring-[#C58211]/20 transition-all"
+                    className="pl-10 pr-10 h-10.5 rounded-xl bg-slate-50/50 hover:bg-white focus:bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:border-[#0284C7] focus:ring-[#0284C7]/20 transition-all"
                     {...register("confirmPassword")}
                   />
                   <button
@@ -286,7 +286,7 @@ export default function MenteeRegisterPage() {
               <div className="pt-1.5">
                 <Button
                   type="submit"
-                  className="w-full h-11 bg-[#C58211] hover:bg-[#B0730D] text-white font-bold rounded-xl text-xs sm:text-sm shadow-md shadow-[#C58211]/25 transition-all flex items-center justify-center gap-2 cursor-pointer border-0 active:scale-[0.99]"
+                  className="w-full h-11 bg-[#0284C7] hover:bg-[#0369A1] text-white font-bold rounded-xl text-xs sm:text-sm shadow-md shadow-[#0284C7]/25 transition-all flex items-center justify-center gap-2 cursor-pointer border-0 active:scale-[0.99]"
                   disabled={loading}
                 >
                   {loading ? (
@@ -309,7 +309,7 @@ export default function MenteeRegisterPage() {
                   Already have an account?{" "}
                   <Link
                     to="/login"
-                    className="font-bold text-[#C58211] hover:underline cursor-pointer"
+                    className="font-bold text-[#0284C7] hover:underline cursor-pointer"
                   >
                     Sign in here
                   </Link>

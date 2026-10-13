@@ -388,13 +388,13 @@ export default function DailyStatusFormPage() {
     .toUpperCase();
 
   return (
-    <div className="min-h-screen bg-[#F5F1E9] text-[#25344A] font-sans antialiased flex flex-col lg:flex-row">
+    <div className="min-h-screen bg-[#F5FAFE] text-[#25344A] font-sans antialiased flex flex-col lg:flex-row">
       {/* Left Sidebar */}
-      <aside className="w-full lg:w-60 bg-[#EAE4D8] border-b lg:border-b-0 lg:border-r border-[#DED5C7] flex flex-col lg:min-h-screen lg:sticky lg:top-0 shrink-0">
+      <aside className="w-full lg:w-60 bg-[#E6F1FA] border-b lg:border-b-0 lg:border-r border-[#D5E5F2] flex flex-col lg:min-h-screen lg:sticky lg:top-0 shrink-0">
         {/* Brand / Logo */}
-        <div className="px-6 py-5 border-b border-[#DED5C7]">
+        <div className="px-6 py-5 border-b border-[#D5E5F2]">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-linear-to-br from-[#E87524] to-[#CB5F16] flex items-center justify-center shadow-sm shrink-0">
+            <div className="h-10 w-10 rounded-xl bg-linear-to-br from-[#0284C7] to-[#0369A1] flex items-center justify-center shadow-sm shrink-0">
               <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="18" cy="5" r="2.5" fill="currentColor" />
                 <circle cx="6" cy="12" r="2.5" fill="currentColor" />
@@ -406,7 +406,7 @@ export default function DailyStatusFormPage() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-base font-bold text-[#25344A] tracking-tight">Mentee</span>
-                <span className="text-[10px] font-bold text-[#E87524] border border-[#E87524] px-2 py-0.5 rounded-full tracking-wider uppercase">
+                <span className="text-[10px] font-bold text-[#0284C7] border border-[#0284C7] px-2 py-0.5 rounded-full tracking-wider uppercase">
                   TRACKER
                 </span>
               </div>
@@ -430,17 +430,17 @@ export default function DailyStatusFormPage() {
                   }
                 }}
                 className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded-xl text-left transition-all cursor-pointer ${isActive
-                    ? "bg-[#FFFAF2] border border-[#DED5C7] text-[#E87524] shadow-xs"
-                    : "text-[#25344A] hover:bg-[#F1EBE0] hover:text-[#25344A] border border-transparent"
+                    ? "bg-[#FFFFFF] border border-[#D5E5F2] text-[#0284C7] shadow-xs"
+                    : "text-[#25344A] hover:bg-[#EEF6FC] hover:text-[#25344A] border border-transparent"
                   }`}
               >
                 <item.icon
-                  className={`h-5 w-5 shrink-0 ${isActive ? "text-[#E87524]" : "text-[#66758A]"
+                  className={`h-5 w-5 shrink-0 ${isActive ? "text-[#0284C7]" : "text-[#66758A]"
                     }`}
                 />
                 <div className="min-w-0">
                   <p
-                    className={`text-xs font-bold leading-tight ${isActive ? "text-[#E87524]" : "text-[#25344A]"
+                    className={`text-xs font-bold leading-tight ${isActive ? "text-[#0284C7]" : "text-[#25344A]"
                       }`}
                   >
                     {item.label}
@@ -456,10 +456,10 @@ export default function DailyStatusFormPage() {
 
         {/* Bottom Tip Card */}
         <div className="p-4">
-          <div className="p-4 rounded-2xl bg-[#FFFAF2] border border-[#DED5C7] shadow-xs space-y-2">
+          <div className="p-4 rounded-2xl bg-[#FFFFFF] border border-[#D5E5F2] shadow-xs space-y-2">
             <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-[#F1EBE0] flex items-center justify-center shrink-0">
-                <Lightbulb className="h-3.5 w-3.5 text-[#E87524]" />
+              <div className="h-6 w-6 rounded-lg bg-[#EEF6FC] flex items-center justify-center shrink-0">
+                <Lightbulb className="h-3.5 w-3.5 text-[#0284C7]" />
               </div>
               <span className="text-xs font-bold text-[#25344A]">Stay consistent!</span>
             </div>
@@ -473,11 +473,11 @@ export default function DailyStatusFormPage() {
       {/* Main Content Area */}
       <div className="flex-1 min-h-screen flex flex-col">
         {/* Top Header Bar */}
-        <header className="bg-transparent border-b border-[#DED5C7] sticky top-0 z-30 backdrop-blur-xs">
+        <header className="bg-transparent border-b border-[#D5E5F2] sticky top-0 z-30 backdrop-blur-xs">
           <div className="px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
             {/* Mobile logo */}
             <div className="flex lg:hidden items-center gap-2.5">
-              <div className="h-9 w-9 rounded-xl bg-linear-to-tr from-[#E87524] to-[#CB5F16] p-0.5 shadow-md shadow-orange-500/20 flex items-center justify-center">
+              <div className="h-9 w-9 rounded-xl bg-linear-to-tr from-[#0284C7] to-[#0369A1] p-0.5 shadow-md shadow-sky-500/20 flex items-center justify-center">
                 <div className="h-full w-full bg-slate-900/10 backdrop-blur-xs rounded-[9px] flex items-center justify-center">
                   <Activity className="h-4 w-4 text-white" />
                 </div>
@@ -485,7 +485,7 @@ export default function DailyStatusFormPage() {
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm font-bold text-[#25344A]">Mentee</span>
-                  <span className="text-[10px] uppercase tracking-wider font-bold text-[#E87524] bg-[#FFFAF2] px-1.5 py-0.5 rounded border border-[#DED5C7]">
+                  <span className="text-[10px] uppercase tracking-wider font-bold text-[#0284C7] bg-[#FFFFFF] px-1.5 py-0.5 rounded border border-[#D5E5F2]">
                     Tracker
                   </span>
                 </div>
@@ -508,7 +508,7 @@ export default function DailyStatusFormPage() {
 
               {/* User Profile Pill */}
               <div className="flex items-center gap-2.5">
-                <div className="h-9 w-9 rounded-full bg-[#E87524] text-white font-bold text-sm flex items-center justify-center shadow-xs">
+                <div className="h-9 w-9 rounded-full bg-[#0284C7] text-white font-bold text-sm flex items-center justify-center shadow-xs">
                   {initials}
                 </div>
                 <span className="font-semibold text-xs sm:text-sm text-[#25344A] hidden sm:inline">
@@ -527,7 +527,7 @@ export default function DailyStatusFormPage() {
         </header>
 
         {/* Mobile Nav */}
-        <div className="lg:hidden flex items-center gap-1 px-4 py-2 bg-[#EAE4D8] border-b border-[#DED5C7] overflow-x-auto">
+        <div className="lg:hidden flex items-center gap-1 px-4 py-2 bg-[#E6F1FA] border-b border-[#D5E5F2] overflow-x-auto">
           {NAV_ITEMS.map((item) => {
             const isActive = location.pathname === item.path;
             return (
@@ -535,11 +535,11 @@ export default function DailyStatusFormPage() {
                 key={item.path}
                 onClick={() => navigate(item.path)}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${isActive
-                  ? "bg-[#FFFAF2] text-[#E87524] border border-[#DED5C7]"
-                  : "text-[#25344A] hover:text-[#25344A] hover:bg-[#F1EBE0] border border-transparent"
+                  ? "bg-[#FFFFFF] text-[#0284C7] border border-[#D5E5F2]"
+                  : "text-[#25344A] hover:text-[#25344A] hover:bg-[#EEF6FC] border border-transparent"
                   }`}
               >
-                <item.icon className={`h-3.5 w-3.5 ${isActive ? "text-[#E87524]" : "text-[#66758A]"}`} />
+                <item.icon className={`h-3.5 w-3.5 ${isActive ? "text-[#0284C7]" : "text-[#66758A]"}`} />
                 {item.label}
               </button>
             );
@@ -548,7 +548,7 @@ export default function DailyStatusFormPage() {
 
         <main className="flex-1 px-4 sm:px-6 lg:px-10 py-6 sm:py-8 space-y-6 w-full">
           {/* Welcome Hero Banner - Soft brand orange gradient */}
-          <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-[#E87524] via-[#DE6B1B] to-[#CB5F16] text-white p-6 sm:p-7 shadow-lg">
+          <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-[#0284C7] via-[#0391D6] to-[#0369A1] text-white p-6 sm:p-7 shadow-lg">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none opacity-20">
               <svg viewBox="0 0 200 200" className="w-full h-full">
@@ -574,9 +574,9 @@ export default function DailyStatusFormPage() {
                 <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                   {editingReport
                     ? `Editing Report for ${editingReport.reportDate}`
-                    : <>Good day, <span className="text-orange-100">{menteeName}</span></>}
+                    : <>Good day, <span className="text-sky-100">{menteeName}</span></>}
                 </h2>
-                <p className="text-xs sm:text-sm text-orange-100 max-w-lg leading-relaxed">
+                <p className="text-xs sm:text-sm text-sky-100 max-w-lg leading-relaxed">
                   {editingReport
                     ? "Make updates to your deliverables, blockers, or timeline below."
                     : "Keep your mentors and leads updated with your daily progress, accomplishments, and roadblocks."}
@@ -599,8 +599,8 @@ export default function DailyStatusFormPage() {
 
           {/* Duplicate report warning notice */}
           {duplicateReport && !editingReport && (
-            <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#FFFAF2] border border-[#DED5C7] text-[#25344A] shadow-xs">
-              <AlertCircle className="h-5 w-5 text-[#E87524] shrink-0 mt-0.5" />
+            <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#D5E5F2] text-[#25344A] shadow-xs">
+              <AlertCircle className="h-5 w-5 text-[#0284C7] shrink-0 mt-0.5" />
               <div className="text-xs space-y-1 flex-1">
                 <p className="font-bold text-[#25344A]">
                   A daily status report has already been logged for {duplicateReport.reportDate}
@@ -614,13 +614,13 @@ export default function DailyStatusFormPage() {
                 <Button
                   size="sm"
                   onClick={handleEditDuplicate}
-                  className="bg-[#E87524] hover:bg-[#CB5F16] text-white text-xs font-semibold rounded-xl shrink-0 cursor-pointer"
+                  className="bg-[#0284C7] hover:bg-[#0369A1] text-white text-xs font-semibold rounded-xl shrink-0 cursor-pointer"
                 >
                   <Pencil className="h-3.5 w-3.5 mr-1" />
                   Edit Today's Entry
                 </Button>
               ) : (
-                <span className="text-xs font-semibold text-[#66758A] bg-[#F1EBE0] px-3 py-1.5 rounded-xl border border-[#DED5C7] shrink-0 inline-flex items-center gap-1.5">
+                <span className="text-xs font-semibold text-[#66758A] bg-[#EEF6FC] px-3 py-1.5 rounded-xl border border-[#D5E5F2] shrink-0 inline-flex items-center gap-1.5">
                   <Lock className="h-3.5 w-3.5 text-[#66758A]" />
                   Edit window expired (15m limit)
                 </span>
@@ -631,10 +631,10 @@ export default function DailyStatusFormPage() {
           {/* Main Status Submission Form */}
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Section 1: Work Deliverables */}
-            <Card className="border border-[#DED5C7] rounded-2xl shadow-xs bg-[#FFFAF2] overflow-hidden">
-              <CardHeader className="bg-[#FFFAF2] border-b border-[#DED5C7] pb-3.5">
+            <Card className="border border-[#D5E5F2] rounded-2xl shadow-xs bg-[#FFFFFF] overflow-hidden">
+              <CardHeader className="bg-[#FFFFFF] border-b border-[#D5E5F2] pb-3.5">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-[#E87524] text-white font-bold text-sm flex items-center justify-center shadow-sm">
+                  <div className="h-8 w-8 rounded-full bg-[#0284C7] text-white font-bold text-sm flex items-center justify-center shadow-sm">
                     1
                   </div>
                   <div>
@@ -655,8 +655,8 @@ export default function DailyStatusFormPage() {
                       <Label htmlFor="reportDate" className="text-xs font-semibold text-[#25344A]">
                         Report Date <span className="text-[#C84B50]">*</span>
                       </Label>
-                      <span className="inline-flex items-center gap-1 text-[11px] text-[#E87524] font-semibold bg-[#F1EBE0] px-2 py-0.5 rounded-md border border-[#DED5C7]">
-                        <Calendar className="h-3 w-3 text-[#E87524]" />
+                      <span className="inline-flex items-center gap-1 text-[11px] text-[#0284C7] font-semibold bg-[#EEF6FC] px-2 py-0.5 rounded-md border border-[#D5E5F2]">
+                        <Calendar className="h-3 w-3 text-[#0284C7]" />
                         Today only
                       </span>
                     </div>
@@ -666,7 +666,7 @@ export default function DailyStatusFormPage() {
                       max={format(new Date(), "yyyy-MM-dd")}
                       disabled={!!editingReport}
                       readOnly={!editingReport}
-                      className="h-10 rounded-xl text-xs bg-[#F1EBE0] border-[#DED5C7] text-[#25344A]"
+                      className="h-10 rounded-xl text-xs bg-[#EEF6FC] border-[#D5E5F2] text-[#25344A]"
                       {...register("reportDate")}
                     />
                     <p className="text-[11px] text-[#66758A]">
@@ -685,7 +685,7 @@ export default function DailyStatusFormPage() {
                       <Input
                         value={menteeName}
                         disabled
-                        className="h-10 rounded-xl bg-[#F1EBE0] border-[#DED5C7] text-[#25344A] text-xs font-medium cursor-not-allowed pl-9"
+                        className="h-10 rounded-xl bg-[#EEF6FC] border-[#D5E5F2] text-[#25344A] text-xs font-medium cursor-not-allowed pl-9"
                       />
                     </div>
                   </div>
@@ -705,7 +705,7 @@ export default function DailyStatusFormPage() {
                     id="currentTask"
                     placeholder="e.g. Implement user authentication workflow with Firebase and tests"
                     maxLength={200}
-                    className="h-10 rounded-xl text-xs font-medium border-[#DED5C7] bg-[#F1EBE0] text-[#25344A] focus-visible:ring-[#E87524]"
+                    className="h-10 rounded-xl text-xs font-medium border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A] focus-visible:ring-[#0284C7]"
                     {...register("currentTask")}
                   />
                   {errors.currentTask && (
@@ -728,7 +728,7 @@ export default function DailyStatusFormPage() {
                     placeholder="Summarize key accomplishments, code changes, PR reviews, or research conducted today..."
                     rows={4}
                     maxLength={2000}
-                    className="rounded-xl text-xs border-[#DED5C7] bg-[#F1EBE0] text-[#25344A] focus-visible:ring-[#E87524] leading-relaxed"
+                    className="rounded-xl text-xs border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A] focus-visible:ring-[#0284C7] leading-relaxed"
                     {...register("shortDescription")}
                   />
                   {errors.shortDescription && (
@@ -739,10 +739,10 @@ export default function DailyStatusFormPage() {
             </Card>
 
             {/* Section 2: Progress & Blockers */}
-            <Card className="border border-[#DED5C7] rounded-2xl shadow-xs bg-[#FFFAF2] overflow-hidden">
-              <CardHeader className="bg-[#FFFAF2] border-b border-[#DED5C7] pb-3.5">
+            <Card className="border border-[#D5E5F2] rounded-2xl shadow-xs bg-[#FFFFFF] overflow-hidden">
+              <CardHeader className="bg-[#FFFFFF] border-b border-[#D5E5F2] pb-3.5">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-[#E87524] text-white font-bold text-sm flex items-center justify-center shadow-sm">
+                  <div className="h-8 w-8 rounded-full bg-[#0284C7] text-white font-bold text-sm flex items-center justify-center shadow-sm">
                     2
                   </div>
                   <div>
@@ -770,8 +770,8 @@ export default function DailyStatusFormPage() {
                           type="button"
                           key={opt.value}
                           onClick={() => setValue("status", opt.value, { shouldValidate: true })}
-                          className={`relative p-3 rounded-xl border border-[#DED5C7] text-xs font-bold transition-all flex flex-col items-center justify-center gap-1 cursor-pointer ${
-                            isSelected ? opt.activeColor : `${opt.hoverColor} bg-[#F1EBE0]`
+                          className={`relative p-3 rounded-xl border border-[#D5E5F2] text-xs font-bold transition-all flex flex-col items-center justify-center gap-1 cursor-pointer ${
+                            isSelected ? opt.activeColor : `${opt.hoverColor} bg-[#EEF6FC]`
                           }`}
                         >
                           {isSelected && (
@@ -812,7 +812,7 @@ export default function DailyStatusFormPage() {
                       maxLength={2000}
                       className={`rounded-xl text-xs ${selectedStatus === "Blocked"
                         ? "border-[#C84B50] focus-visible:ring-[#C84B50] bg-[#C84B50]/10 text-[#C84B50]"
-                        : "border-[#DED5C7] bg-[#F1EBE0] text-[#25344A]"
+                        : "border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A]"
                         }`}
                       {...register("blockerDependency")}
                     />
@@ -832,7 +832,7 @@ export default function DailyStatusFormPage() {
                       placeholder="Need assistance with next task assignment or waiting for code review..."
                       rows={3}
                       maxLength={2000}
-                      className="rounded-xl text-xs border-[#DED5C7] bg-[#F1EBE0] text-[#25344A]"
+                      className="rounded-xl text-xs border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A]"
                       {...register("idleReasonWorkNeeded")}
                     />
                   </div>
@@ -841,10 +841,10 @@ export default function DailyStatusFormPage() {
             </Card>
 
             {/* Section 3: Collaboration & Timeline */}
-            <Card className="border border-[#DED5C7] rounded-2xl shadow-xs bg-[#FFFAF2] overflow-hidden">
-              <CardHeader className="bg-[#FFFAF2] border-b border-[#DED5C7] pb-3.5">
+            <Card className="border border-[#D5E5F2] rounded-2xl shadow-xs bg-[#FFFFFF] overflow-hidden">
+              <CardHeader className="bg-[#FFFFFF] border-b border-[#D5E5F2] pb-3.5">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-[#E87524] text-white font-bold text-sm flex items-center justify-center shadow-sm">
+                  <div className="h-8 w-8 rounded-full bg-[#0284C7] text-white font-bold text-sm flex items-center justify-center shadow-sm">
                     3
                   </div>
                   <div>
@@ -870,7 +870,7 @@ export default function DailyStatusFormPage() {
                         id="managerLead"
                         placeholder="e.g. John Doe (Tech Lead)"
                         maxLength={100}
-                        className="h-10 rounded-xl text-xs border-[#DED5C7] bg-[#F1EBE0] text-[#25344A] pl-9"
+                        className="h-10 rounded-xl text-xs border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A] pl-9"
                         {...register("managerLead")}
                       />
                     </div>
@@ -888,7 +888,7 @@ export default function DailyStatusFormPage() {
                     <DateInput
                       id="expectedCompletion"
                       min={format(new Date(), "yyyy-MM-dd")}
-                      className="h-10 rounded-xl text-xs bg-[#F1EBE0] border-[#DED5C7] text-[#25344A]"
+                      className="h-10 rounded-xl text-xs bg-[#EEF6FC] border-[#D5E5F2] text-[#25344A]"
                       {...register("expectedCompletion")}
                     />
                     <p className="text-[11px] text-[#66758A]">
@@ -911,7 +911,7 @@ export default function DailyStatusFormPage() {
                     placeholder="Any extra context or links to PRs / Jira tickets..."
                     rows={2}
                     maxLength={2000}
-                    className="rounded-xl text-xs border-[#DED5C7] bg-[#F1EBE0] text-[#25344A]"
+                    className="rounded-xl text-xs border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A]"
                     {...register("notes")}
                   />
                 </div>
@@ -926,13 +926,13 @@ export default function DailyStatusFormPage() {
                     type="button"
                     variant="outline"
                     onClick={handleCancelEdit}
-                    className="rounded-xl text-xs border-[#DED5C7] bg-[#FFFAF2] text-[#25344A] hover:bg-[#F1EBE0]"
+                    className="rounded-xl text-xs border-[#D5E5F2] bg-[#FFFFFF] text-[#25344A] hover:bg-[#EEF6FC]"
                   >
                     Cancel Edit
                   </Button>
                   <Button
                     type="submit"
-                    className="h-11 px-6 bg-linear-to-r from-[#E87524] to-[#CB5F16] hover:from-[#CB5F16] hover:to-[#B54E0F] text-white font-semibold rounded-xl text-xs shadow-md shadow-orange-500/20 border-0 cursor-pointer"
+                    className="h-11 px-6 bg-linear-to-r from-[#0284C7] to-[#0369A1] hover:from-[#0369A1] hover:to-[#075985] text-white font-semibold rounded-xl text-xs shadow-md shadow-sky-500/20 border-0 cursor-pointer"
                     disabled={submitting}
                   >
                     {submitting ? (
@@ -954,14 +954,14 @@ export default function DailyStatusFormPage() {
                     type="button"
                     variant="outline"
                     onClick={handleReset}
-                    className="h-11 px-5 rounded-xl text-xs font-semibold border-[#DED5C7] bg-[#FFFAF2] text-[#25344A] hover:bg-[#F1EBE0] cursor-pointer"
+                    className="h-11 px-5 rounded-xl text-xs font-semibold border-[#D5E5F2] bg-[#FFFFFF] text-[#25344A] hover:bg-[#EEF6FC] cursor-pointer"
                   >
                     <RotateCcw className="h-3.5 w-3.5 mr-1.5" />
                     Reset
                   </Button>
                   <Button
                     type="submit"
-                    className="h-11 px-8 bg-linear-to-r from-[#E87524] to-[#CB5F16] hover:from-[#CB5F16] hover:to-[#B54E0F] text-white font-bold rounded-xl text-xs shadow-md shadow-orange-500/20 border-0 transition-transform active:scale-95 cursor-pointer"
+                    className="h-11 px-8 bg-linear-to-r from-[#0284C7] to-[#0369A1] hover:from-[#0369A1] hover:to-[#075985] text-white font-bold rounded-xl text-xs shadow-md shadow-sky-500/20 border-0 transition-transform active:scale-95 cursor-pointer"
                     disabled={submitting || !!duplicateReport}
                   >
                     {submitting ? (
@@ -992,7 +992,7 @@ export default function DailyStatusFormPage() {
                 variant="outline"
                 size="sm"
                 onClick={() => navigate("/my-reports")}
-                className="text-xs rounded-xl border-[#DED5C7] bg-[#FFFAF2] text-[#25344A] hover:bg-[#F1EBE0] cursor-pointer"
+                className="text-xs rounded-xl border-[#D5E5F2] bg-[#FFFFFF] text-[#25344A] hover:bg-[#EEF6FC] cursor-pointer"
               >
                 View Full History
                 <ArrowRight className="h-3.5 w-3.5 ml-1.5" />
@@ -1000,9 +1000,9 @@ export default function DailyStatusFormPage() {
             </div>
 
             {reports.length === 0 && !loadingReports ? (
-              <Card className="rounded-2xl border border-[#DED5C7] bg-[#FFFAF2]">
+              <Card className="rounded-2xl border border-[#D5E5F2] bg-[#FFFFFF]">
                 <CardContent className="py-12 text-center space-y-2">
-                  <div className="h-12 w-12 rounded-2xl bg-[#F1EBE0] text-[#E87524] mx-auto flex items-center justify-center">
+                  <div className="h-12 w-12 rounded-2xl bg-[#EEF6FC] text-[#0284C7] mx-auto flex items-center justify-center">
                     <FileText className="h-6 w-6" />
                   </div>
                   <h4 className="text-sm font-bold text-[#25344A]">No Past Reports Yet</h4>
@@ -1012,10 +1012,10 @@ export default function DailyStatusFormPage() {
                 </CardContent>
               </Card>
             ) : (
-              <div className="bg-[#FFFAF2] rounded-2xl border border-[#DED5C7] shadow-xs overflow-hidden">
+              <div className="bg-[#FFFFFF] rounded-2xl border border-[#D5E5F2] shadow-xs overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-xs text-left">
-                    <thead className="bg-[#F1EBE0] text-[#66758A] border-b border-[#DED5C7] uppercase tracking-wider text-[11px] font-bold">
+                    <thead className="bg-[#EEF6FC] text-[#66758A] border-b border-[#D5E5F2] uppercase tracking-wider text-[11px] font-bold">
                       <tr>
                         <th className="py-3.5 px-4 whitespace-nowrap">Date</th>
                         <th className="py-3.5 px-4">Task & Description</th>
@@ -1026,11 +1026,11 @@ export default function DailyStatusFormPage() {
                         <th className="py-3.5 px-4 text-right whitespace-nowrap">Action</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#DED5C7]/60">
+                    <tbody className="divide-y divide-[#D5E5F2]/60">
                       {reports.map((report, idx) => (
                         <tr
                           key={report.reportId}
-                          className={`hover:bg-[#F1EBE0]/60 transition-colors ${idx % 2 === 0 ? "bg-[#FFFAF2]" : "bg-[#F1EBE0]/30"
+                          className={`hover:bg-[#EEF6FC]/60 transition-colors ${idx % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#EEF6FC]/30"
                             }`}
                         >
                           <td className="py-3 px-4 font-semibold text-[#25344A] whitespace-nowrap">
@@ -1069,7 +1069,7 @@ export default function DailyStatusFormPage() {
                               <button
                                 type="button"
                                 onClick={() => setPreviewReport(report)}
-                                className="h-7 px-2.5 text-xs text-[#25344A] hover:text-[#E87524] hover:bg-[#F1EBE0] bg-[#FFFAF2] rounded-lg inline-flex items-center gap-1 border border-[#DED5C7] transition-colors cursor-pointer"
+                                className="h-7 px-2.5 text-xs text-[#25344A] hover:text-[#0284C7] hover:bg-[#EEF6FC] bg-[#FFFFFF] rounded-lg inline-flex items-center gap-1 border border-[#D5E5F2] transition-colors cursor-pointer"
                               >
                                 <Eye className="h-3 w-3" />
                                 View
@@ -1078,7 +1078,7 @@ export default function DailyStatusFormPage() {
                                 <button
                                   type="button"
                                   onClick={() => handleEdit(report)}
-                                  className="h-7 px-2.5 text-xs text-[#E87524] hover:text-[#CB5F16] hover:bg-[#F1EBE0] bg-[#FFFAF2] rounded-lg inline-flex items-center gap-1 border border-[#DED5C7] font-semibold transition-colors cursor-pointer"
+                                  className="h-7 px-2.5 text-xs text-[#0284C7] hover:text-[#0369A1] hover:bg-[#EEF6FC] bg-[#FFFFFF] rounded-lg inline-flex items-center gap-1 border border-[#D5E5F2] font-semibold transition-colors cursor-pointer"
                                 >
                                   <Pencil className="h-3 w-3" />
                                   Edit
@@ -1088,7 +1088,7 @@ export default function DailyStatusFormPage() {
                                   type="button"
                                   disabled
                                   title="Editing is locked after 15 minutes of submission"
-                                  className="h-7 px-2.5 text-xs text-[#66758A]/50 bg-[#F1EBE0]/60 rounded-lg inline-flex items-center gap-1 border border-[#DED5C7]/50 cursor-not-allowed"
+                                  className="h-7 px-2.5 text-xs text-[#66758A]/50 bg-[#EEF6FC]/60 rounded-lg inline-flex items-center gap-1 border border-[#D5E5F2]/50 cursor-not-allowed"
                                 >
                                   <Lock className="h-3 w-3" />
                                   Edit

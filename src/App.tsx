@@ -20,7 +20,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <Loader2 className="h-8 w-8 animate-spin text-[#F97316]" />
+        <Loader2 className="h-8 w-8 animate-spin text-[#0EA5E9]" />
       </div>
     );
   }
@@ -38,7 +38,7 @@ function PublicRoute({ children }: { children: React.ReactNode }) {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <Loader2 className="h-8 w-8 animate-spin text-[#F97316]" />
+        <Loader2 className="h-8 w-8 animate-spin text-[#0EA5E9]" />
       </div>
     );
   }

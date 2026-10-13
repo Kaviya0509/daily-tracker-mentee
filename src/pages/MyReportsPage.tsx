@@ -165,14 +165,14 @@ function renderStatusBadge(status: ReportStatus) {
       );
     case "On Hold":
       return (
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#E87524]/10 text-[#E87524] border border-[#E87524]/30">
-          <span className="h-2 w-2 rounded-full bg-[#E87524] shrink-0" />
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0284C7]/10 text-[#0284C7] border border-[#0284C7]/30">
+          <span className="h-2 w-2 rounded-full bg-[#0284C7] shrink-0" />
           On Hold
         </span>
       );
     default:
       return (
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#F1EBE0] text-[#25344A] border border-[#DED5C7]">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#EEF6FC] text-[#25344A] border border-[#D5E5F2]">
           <span className="h-2 w-2 rounded-full bg-[#66758A] shrink-0" />
           {status}
         </span>
@@ -323,13 +323,13 @@ export default function MyReportsPage() {
   }, [currentPage, totalPages]);
 
   return (
-    <div className="min-h-screen bg-[#F5F1E9] text-[#25344A] font-sans antialiased flex flex-col lg:flex-row">
+    <div className="min-h-screen bg-[#F5FAFE] text-[#25344A] font-sans antialiased flex flex-col lg:flex-row">
       {/* Left Sidebar */}
-      <aside className="w-full lg:w-60 bg-[#EAE4D8] border-b lg:border-b-0 lg:border-r border-[#DED5C7] flex flex-col lg:min-h-screen lg:sticky lg:top-0 shrink-0">
+      <aside className="w-full lg:w-60 bg-[#E6F1FA] border-b lg:border-b-0 lg:border-r border-[#D5E5F2] flex flex-col lg:min-h-screen lg:sticky lg:top-0 shrink-0">
         {/* Brand / Logo */}
-        <div className="px-6 py-5 border-b border-[#DED5C7]">
+        <div className="px-6 py-5 border-b border-[#D5E5F2]">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-linear-to-br from-[#E87524] to-[#CB5F16] flex items-center justify-center shadow-sm shrink-0">
+            <div className="h-10 w-10 rounded-xl bg-linear-to-br from-[#0284C7] to-[#0369A1] flex items-center justify-center shadow-sm shrink-0">
               <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="18" cy="5" r="2.5" fill="currentColor" />
                 <circle cx="6" cy="12" r="2.5" fill="currentColor" />
@@ -341,7 +341,7 @@ export default function MyReportsPage() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-base font-bold text-[#25344A] tracking-tight">Mentee</span>
-                <span className="text-[10px] font-bold text-[#E87524] border border-[#E87524] px-2 py-0.5 rounded-full tracking-wider uppercase">
+                <span className="text-[10px] font-bold text-[#0284C7] border border-[#0284C7] px-2 py-0.5 rounded-full tracking-wider uppercase">
                   TRACKER
                 </span>
               </div>
@@ -365,17 +365,17 @@ export default function MyReportsPage() {
                   }
                 }}
                 className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded-xl text-left transition-all cursor-pointer ${isActive
-                    ? "bg-[#FFFAF2] border border-[#DED5C7] text-[#E87524] shadow-xs"
-                    : "text-[#25344A] hover:bg-[#F1EBE0] hover:text-[#25344A] border border-transparent"
+                    ? "bg-[#FFFFFF] border border-[#D5E5F2] text-[#0284C7] shadow-xs"
+                    : "text-[#25344A] hover:bg-[#EEF6FC] hover:text-[#25344A] border border-transparent"
                   }`}
               >
                 <item.icon
-                  className={`h-5 w-5 shrink-0 ${isActive ? "text-[#E87524]" : "text-[#66758A]"
+                  className={`h-5 w-5 shrink-0 ${isActive ? "text-[#0284C7]" : "text-[#66758A]"
                     }`}
                 />
                 <div className="min-w-0">
                   <p
-                    className={`text-xs font-bold leading-tight ${isActive ? "text-[#E87524]" : "text-[#25344A]"
+                    className={`text-xs font-bold leading-tight ${isActive ? "text-[#0284C7]" : "text-[#25344A]"
                       }`}
                   >
                     {item.label}
@@ -391,10 +391,10 @@ export default function MyReportsPage() {
 
         {/* Bottom Tip Card */}
         <div className="p-4">
-          <div className="p-4 rounded-2xl bg-[#FFFAF2] border border-[#DED5C7] shadow-xs space-y-2">
+          <div className="p-4 rounded-2xl bg-[#FFFFFF] border border-[#D5E5F2] shadow-xs space-y-2">
             <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-[#F1EBE0] flex items-center justify-center shrink-0">
-                <Lightbulb className="h-3.5 w-3.5 text-[#E87524]" />
+              <div className="h-6 w-6 rounded-lg bg-[#EEF6FC] flex items-center justify-center shrink-0">
+                <Lightbulb className="h-3.5 w-3.5 text-[#0284C7]" />
               </div>
               <span className="text-xs font-bold text-[#25344A]">Stay consistent!</span>
             </div>
@@ -425,7 +425,7 @@ export default function MyReportsPage() {
 
             {/* User Profile Pill */}
             <div className="flex items-center gap-2.5">
-              <div className="h-9 w-9 rounded-full bg-[#E87524] text-white font-bold text-sm flex items-center justify-center shadow-xs">
+              <div className="h-9 w-9 rounded-full bg-[#0284C7] text-white font-bold text-sm flex items-center justify-center shadow-xs">
                 {initials}
               </div>
               <span className="font-semibold text-xs sm:text-sm text-[#25344A] hidden sm:inline">
@@ -445,22 +445,22 @@ export default function MyReportsPage() {
         {/* Content Body */}
         <main className="flex-1 px-4 sm:px-8 lg:px-10 pb-10 space-y-6 w-full">
           {/* Hero Banner: Warm brand orange/amber gradient */}
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-linear-to-r from-[#E87524] via-[#DE6B1B] to-[#CB5F16] text-white p-6 sm:p-9 shadow-md">
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-linear-to-r from-[#0284C7] via-[#0391D6] to-[#0369A1] text-white p-6 sm:p-9 shadow-md">
             {/* Diagonal ambient highlight */}
-            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/4 to-amber-300/12 pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/4 to-sky-300/12 pointer-events-none" />
 
             {/* Right Side Illustration matching mockup */}
             <div className="absolute right-0 top-0 bottom-0 w-80 sm:w-96 pointer-events-none hidden md:flex items-center justify-end pr-6 lg:pr-10">
               <svg viewBox="0 0 320 180" className="w-full h-full max-h-40" fill="none">
                 {/* 3D Golden Bar Chart (rising bars) */}
                 <g transform="translate(75, 45)">
-                  <rect x="0" y="55" width="16" height="40" rx="3" fill="#D97706" />
+                  <rect x="0" y="55" width="16" height="40" rx="3" fill="#0284C7" />
                   <polygon points="0,55 8,49 24,49 16,55" fill="#FBBF24" />
                   <polygon points="16,55 24,49 24,89 16,95" fill="#B45309" />
-                  <rect x="22" y="35" width="16" height="60" rx="3" fill="#D97706" />
+                  <rect x="22" y="35" width="16" height="60" rx="3" fill="#0284C7" />
                   <polygon points="22,35 30,29 46,29 38,35" fill="#FBBF24" />
                   <polygon points="38,35 46,29 46,89 38,95" fill="#B45309" />
-                  <rect x="44" y="15" width="16" height="80" rx="3" fill="#D97706" />
+                  <rect x="44" y="15" width="16" height="80" rx="3" fill="#0284C7" />
                   <polygon points="44,15 52,9 68,9 60,15" fill="#FDE047" />
                   <polygon points="60,15 68,9 68,89 60,95" fill="#B45309" />
                 </g>
@@ -471,15 +471,15 @@ export default function MyReportsPage() {
                   <rect x="28" y="-6" width="38" height="14" rx="3" fill="#8C531B" />
                   <rect x="36" y="-3" width="22" height="6" rx="2" fill="#D99B4B" />
                   <rect x="8" y="12" width="79" height="114" rx="4" fill="#FFFFFF" />
-                  <rect x="15" y="24" width="12" height="12" rx="2" fill="#EA580C" />
+                  <rect x="15" y="24" width="12" height="12" rx="2" fill="#0369A1" />
                   <polyline points="18,30 20,33 24,26" stroke="#FFFFFF" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                   <rect x="32" y="27" width="45" height="4" rx="2" fill="#CBD5E1" />
                   <rect x="32" y="33" width="30" height="3" rx="1.5" fill="#E2E8F0" />
-                  <rect x="15" y="44" width="12" height="12" rx="2" fill="#EA580C" />
+                  <rect x="15" y="44" width="12" height="12" rx="2" fill="#0369A1" />
                   <polyline points="18,50 20,53 24,46" stroke="#FFFFFF" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                   <rect x="32" y="47" width="48" height="4" rx="2" fill="#CBD5E1" />
                   <rect x="32" y="53" width="25" height="3" rx="1.5" fill="#E2E8F0" />
-                  <rect x="15" y="64" width="12" height="12" rx="2" fill="#EA580C" />
+                  <rect x="15" y="64" width="12" height="12" rx="2" fill="#0369A1" />
                   <polyline points="18,70 20,73 24,66" stroke="#FFFFFF" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                   <rect x="32" y="67" width="42" height="4" rx="2" fill="#CBD5E1" />
                   <rect x="32" y="73" width="35" height="3" rx="1.5" fill="#E2E8F0" />
@@ -490,8 +490,8 @@ export default function MyReportsPage() {
                 {/* Golden Foliage / Leaves on the right */}
                 <g transform="translate(265, 55)">
                   <path d="M10 50 Q25 15 45 35 Q25 55 10 50" fill="#FBBF24" opacity="0.9" />
-                  <path d="M20 70 Q40 40 50 60 Q35 80 20 70" fill="#F59E0B" opacity="0.85" />
-                  <path d="M5 90 Q30 80 40 100 Q20 110 5 90" fill="#D97706" opacity="0.95" />
+                  <path d="M20 70 Q40 40 50 60 Q35 80 20 70" fill="#0EA5E9" opacity="0.85" />
+                  <path d="M5 90 Q30 80 40 100 Q20 110 5 90" fill="#0284C7" opacity="0.95" />
                 </g>
               </svg>
             </div>
@@ -506,7 +506,7 @@ export default function MyReportsPage() {
                   My Reports
                 </h1>
               </div>
-              <p className="text-xs sm:text-sm text-orange-100/90 ml-0.5 max-w-md">
+              <p className="text-xs sm:text-sm text-sky-100/90 ml-0.5 max-w-md">
                 View, edit and track all your submitted daily status reports.
               </p>
             </div>
@@ -523,7 +523,7 @@ export default function MyReportsPage() {
                 </label>
                 <div
                   onClick={() => setShowDatePicker(!showDatePicker)}
-                  className="h-10 px-3.5 bg-[#F1EBE0] border border-[#DED5C7] rounded-xl flex items-center gap-2.5 text-xs font-medium text-[#25344A] cursor-pointer shadow-xs hover:border-[#E87524] transition-colors min-w-60"
+                  className="h-10 px-3.5 bg-[#EEF6FC] border border-[#D5E5F2] rounded-xl flex items-center gap-2.5 text-xs font-medium text-[#25344A] cursor-pointer shadow-xs hover:border-[#0284C7] transition-colors min-w-60"
                 >
                   <Calendar className="h-4 w-4 text-[#66758A] shrink-0" />
                   <span className="flex-1 text-[#25344A]">{dateRange}</span>
@@ -532,7 +532,7 @@ export default function MyReportsPage() {
 
                 {/* Popover to adjust dates if clicked */}
                 {showDatePicker && (
-                  <div className="absolute top-full left-0 mt-2 p-3 bg-[#FFFAF2] border border-[#DED5C7] rounded-xl shadow-lg z-20 space-y-2.5 w-64">
+                  <div className="absolute top-full left-0 mt-2 p-3 bg-[#FFFFFF] border border-[#D5E5F2] rounded-xl shadow-lg z-20 space-y-2.5 w-64">
                     <p className="text-xs font-bold text-[#25344A]">Filter By Date Range</p>
                     <div className="space-y-1">
                       <label className="text-[10px] text-[#66758A]">From</label>
@@ -543,7 +543,7 @@ export default function MyReportsPage() {
                           setDateFrom(e.target.value);
                           setDateRange(`${e.target.value || "Start"} - ${dateTo || "End"}`);
                         }}
-                        className="h-8 text-xs bg-[#F1EBE0] border-[#DED5C7] text-[#25344A]"
+                        className="h-8 text-xs bg-[#EEF6FC] border-[#D5E5F2] text-[#25344A]"
                       />
                     </div>
                     <div className="space-y-1">
@@ -555,7 +555,7 @@ export default function MyReportsPage() {
                           setDateTo(e.target.value);
                           setDateRange(`${dateFrom || "Start"} - ${e.target.value || "End"}`);
                         }}
-                        className="h-8 text-xs bg-[#F1EBE0] border-[#DED5C7] text-[#25344A]"
+                        className="h-8 text-xs bg-[#EEF6FC] border-[#D5E5F2] text-[#25344A]"
                       />
                     </div>
                     <div className="flex justify-end gap-1.5 pt-1">
@@ -575,7 +575,7 @@ export default function MyReportsPage() {
                       <Button
                         size="sm"
                         onClick={() => setShowDatePicker(false)}
-                        className="h-7 text-xs bg-[#E87524] hover:bg-[#CB5F16] text-white"
+                        className="h-7 text-xs bg-[#0284C7] hover:bg-[#0369A1] text-white"
                       >
                         Apply
                       </Button>
@@ -593,7 +593,7 @@ export default function MyReportsPage() {
                   <select
                     value={statusFilter}
                     onChange={(e) => setStatusFilter(e.target.value)}
-                    className="h-10 pl-3.5 pr-8 bg-[#F1EBE0] border border-[#DED5C7] rounded-xl text-xs font-medium text-[#25344A] cursor-pointer shadow-xs focus:outline-none focus:ring-2 focus:ring-[#E87524]/40 appearance-none min-w-37.5"
+                    className="h-10 pl-3.5 pr-8 bg-[#EEF6FC] border border-[#D5E5F2] rounded-xl text-xs font-medium text-[#25344A] cursor-pointer shadow-xs focus:outline-none focus:ring-2 focus:ring-[#0284C7]/40 appearance-none min-w-37.5"
                   >
                     <option value="all">All Status</option>
                     <option value="Completed">Completed</option>
@@ -614,7 +614,7 @@ export default function MyReportsPage() {
                   placeholder="Search by task title or description..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="pl-9 pr-8 h-10 text-xs rounded-xl border-[#DED5C7] bg-[#F1EBE0] text-[#25344A] shadow-xs focus-visible:ring-[#E87524]/40 w-full placeholder:text-[#66758A]/70"
+                  className="pl-9 pr-8 h-10 text-xs rounded-xl border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A] shadow-xs focus-visible:ring-[#0284C7]/40 w-full placeholder:text-[#66758A]/70"
                 />
                 {search && (
                   <button
@@ -628,7 +628,7 @@ export default function MyReportsPage() {
 
               <button
                 onClick={handleClearFilters}
-                className="h-10 px-4 bg-[#FFFAF2] border border-[#DED5C7] hover:bg-[#F1EBE0] text-[#25344A] rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow-xs transition-colors shrink-0 cursor-pointer"
+                className="h-10 px-4 bg-[#FFFFFF] border border-[#D5E5F2] hover:bg-[#EEF6FC] text-[#25344A] rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow-xs transition-colors shrink-0 cursor-pointer"
               >
                 <RotateCcw className="h-3.5 w-3.5" />
                 Clear
@@ -638,16 +638,16 @@ export default function MyReportsPage() {
 
           {/* Full Width Reports Table */}
           {loadingReports && reports.length === 0 ? (
-            <Card className="rounded-2xl border border-[#DED5C7] bg-[#FFFAF2]">
+            <Card className="rounded-2xl border border-[#D5E5F2] bg-[#FFFFFF]">
               <CardContent className="py-20 text-center">
-                <Loader2 className="h-8 w-8 animate-spin text-[#E87524] mx-auto" />
+                <Loader2 className="h-8 w-8 animate-spin text-[#0284C7] mx-auto" />
                 <p className="text-xs font-medium text-[#66758A] mt-3">Loading your reports...</p>
               </CardContent>
             </Card>
           ) : filteredReports.length === 0 ? (
-            <Card className="rounded-2xl border border-[#DED5C7] bg-[#FFFAF2]">
+            <Card className="rounded-2xl border border-[#D5E5F2] bg-[#FFFFFF]">
               <CardContent className="py-20 text-center space-y-3">
-                <div className="h-12 w-12 rounded-2xl bg-[#F1EBE0] text-[#E87524] mx-auto flex items-center justify-center">
+                <div className="h-12 w-12 rounded-2xl bg-[#EEF6FC] text-[#0284C7] mx-auto flex items-center justify-center">
                   <FileText className="h-6 w-6" />
                 </div>
                 <h4 className="text-base font-bold text-[#25344A]">No Reports Match Your Filter</h4>
@@ -658,21 +658,21 @@ export default function MyReportsPage() {
                   variant="outline"
                   size="sm"
                   onClick={handleClearFilters}
-                  className="rounded-xl text-xs text-[#E87524] border-[#E87524]/40 hover:bg-[#F1EBE0]"
+                  className="rounded-xl text-xs text-[#0284C7] border-[#0284C7]/40 hover:bg-[#EEF6FC]"
                 >
                   Reset All Filters
                 </Button>
               </CardContent>
             </Card>
           ) : (
-            <div className="bg-[#FFFAF2] rounded-2xl border border-[#DED5C7] shadow-xs overflow-hidden">
+            <div className="bg-[#FFFFFF] rounded-2xl border border-[#D5E5F2] shadow-xs overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-xs text-left">
                   <thead>
-                    <tr className="bg-[#F1EBE0] border-b border-[#DED5C7]">
+                    <tr className="bg-[#EEF6FC] border-b border-[#D5E5F2]">
                       <th className="py-3.5 px-5 text-[11px] font-bold text-[#66758A] uppercase tracking-wider">
                         <div className="flex items-center gap-1 cursor-pointer select-none">
-                          Date <span className="text-[#E87524] text-xs font-bold">↕</span>
+                          Date <span className="text-[#0284C7] text-xs font-bold">↕</span>
                         </div>
                       </th>
                       <th className="py-3.5 px-5 text-[11px] font-bold text-[#66758A] uppercase tracking-wider">
@@ -695,7 +695,7 @@ export default function MyReportsPage() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#DED5C7]/60">
+                  <tbody className="divide-y divide-[#D5E5F2]/60">
                     {paginatedReports.map((report) => {
                       const { display: dateDisplay, dayName } = formatDateDisplay(report.reportDate);
                       const updatedDisplay = report.updatedAt?.toDate
@@ -708,7 +708,7 @@ export default function MyReportsPage() {
                       return (
                         <tr
                           key={report.reportId}
-                          className="hover:bg-[#F1EBE0]/60 transition-colors"
+                          className="hover:bg-[#EEF6FC]/60 transition-colors"
                         >
                           {/* Date Column */}
                           <td className="py-4 px-5 whitespace-nowrap">
@@ -755,7 +755,7 @@ export default function MyReportsPage() {
                               {/* View Button */}
                               <button
                                 onClick={() => setSelectedReport(report)}
-                                className="h-8 px-3.5 rounded-xl border border-[#DED5C7] bg-[#F1EBE0] text-[#25344A] hover:text-[#E87524] hover:bg-[#FFFAF2] hover:border-[#E87524]/40 text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-2xs cursor-pointer"
+                                className="h-8 px-3.5 rounded-xl border border-[#D5E5F2] bg-[#EEF6FC] text-[#25344A] hover:text-[#0284C7] hover:bg-[#FFFFFF] hover:border-[#0284C7]/40 text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-2xs cursor-pointer"
                               >
                                 <Eye className="h-3.5 w-3.5" />
                                 View
@@ -765,7 +765,7 @@ export default function MyReportsPage() {
                               {isReportEditable(report) ? (
                                 <button
                                   onClick={() => handleEdit(report)}
-                                  className="h-8 px-3.5 rounded-xl border border-[#E87524]/30 bg-[#FFFAF2] text-[#E87524] hover:bg-[#E87524] hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-2xs cursor-pointer"
+                                  className="h-8 px-3.5 rounded-xl border border-[#0284C7]/30 bg-[#FFFFFF] text-[#0284C7] hover:bg-[#0284C7] hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-2xs cursor-pointer"
                                 >
                                   <Pencil className="h-3.5 w-3.5" />
                                   Edit
@@ -774,7 +774,7 @@ export default function MyReportsPage() {
                                 <button
                                   disabled
                                   title="Editing is locked after 15 minutes of submission"
-                                  className="h-8 px-3.5 rounded-xl border border-[#DED5C7]/50 bg-[#F1EBE0]/60 text-[#66758A]/50 text-xs font-semibold flex items-center gap-1.5 cursor-not-allowed"
+                                  className="h-8 px-3.5 rounded-xl border border-[#D5E5F2]/50 bg-[#EEF6FC]/60 text-[#66758A]/50 text-xs font-semibold flex items-center gap-1.5 cursor-not-allowed"
                                 >
                                   <Lock className="h-3.5 w-3.5" />
                                   Edit
@@ -790,7 +790,7 @@ export default function MyReportsPage() {
               </div>
 
               {/* Table Footer / Pagination */}
-              <div className="flex flex-col sm:flex-row items-center justify-between px-5 py-3.5 border-t border-[#DED5C7] bg-[#F1EBE0] gap-3">
+              <div className="flex flex-col sm:flex-row items-center justify-between px-5 py-3.5 border-t border-[#D5E5F2] bg-[#EEF6FC] gap-3">
                 <p className="text-xs text-[#66758A] font-medium">
                   Showing {(currentPage - 1) * ITEMS_PER_PAGE + 1} to{" "}
                   {Math.min(currentPage * ITEMS_PER_PAGE, filteredReports.length)} of{" "}
@@ -802,7 +802,7 @@ export default function MyReportsPage() {
                   <button
                     onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                     disabled={currentPage === 1}
-                    className="h-8 w-8 flex items-center justify-center rounded-xl text-[#66758A] hover:bg-[#EAE4D8] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                    className="h-8 w-8 flex items-center justify-center rounded-xl text-[#66758A] hover:bg-[#E6F1FA] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                   >
                     <ChevronLeft className="h-4 w-4" />
                   </button>
@@ -813,8 +813,8 @@ export default function MyReportsPage() {
                       key={page}
                       onClick={() => setCurrentPage(page)}
                       className={`h-8 w-8 flex items-center justify-center rounded-xl text-xs font-bold transition-colors ${page === currentPage
-                          ? "bg-[#E87524] text-white shadow-xs"
-                          : "text-[#25344A] hover:bg-[#EAE4D8]"
+                          ? "bg-[#0284C7] text-white shadow-xs"
+                          : "text-[#25344A] hover:bg-[#E6F1FA]"
                         }`}
                     >
                       {page}
@@ -825,7 +825,7 @@ export default function MyReportsPage() {
                   <button
                     onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                     disabled={currentPage === totalPages}
-                    className="h-8 w-8 flex items-center justify-center rounded-xl text-[#66758A] hover:bg-[#EAE4D8] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                    className="h-8 w-8 flex items-center justify-center rounded-xl text-[#66758A] hover:bg-[#E6F1FA] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                   >
                     <ChevronRight className="h-4 w-4" />
                   </button>
@@ -840,7 +840,7 @@ export default function MyReportsPage() {
                 variant="outline"
                 onClick={() => loadReports(false)}
                 disabled={loadingReports}
-                className="rounded-xl text-xs border-[#DED5C7] text-[#E87524] hover:bg-[#F1EBE0]"
+                className="rounded-xl text-xs border-[#D5E5F2] text-[#0284C7] hover:bg-[#EEF6FC]"
               >
                 {loadingReports && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
                 Load More Reports
@@ -853,16 +853,16 @@ export default function MyReportsPage() {
       {/* Interactive Report View Modal Dialog */}
       {selectedReport && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in">
-          <div className="bg-[#FFFAF2] rounded-3xl max-w-2xl w-full border border-[#DED5C7] shadow-2xl overflow-hidden animate-in zoom-in-95">
+          <div className="bg-[#FFFFFF] rounded-3xl max-w-2xl w-full border border-[#D5E5F2] shadow-2xl overflow-hidden animate-in zoom-in-95">
             {/* Modal Header */}
-            <div className="bg-linear-to-r from-[#E87524] to-[#CB5F16] text-white p-5 flex items-center justify-between">
+            <div className="bg-linear-to-r from-[#0284C7] to-[#0369A1] text-white p-5 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <div className="h-9 w-9 rounded-xl bg-white/20 backdrop-blur-xs flex items-center justify-center text-white">
                   <FileText className="h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-white">Daily Report Details</h3>
-                  <p className="text-[11px] text-orange-100">
+                  <p className="text-[11px] text-sky-100">
                     Report Date: {formatDateDisplay(selectedReport.reportDate).display}
                   </p>
                 </div>
@@ -888,7 +888,7 @@ export default function MyReportsPage() {
               </div>
 
               {/* Core Details Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 bg-[#F1EBE0] rounded-2xl border border-[#DED5C7] text-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 bg-[#EEF6FC] rounded-2xl border border-[#D5E5F2] text-xs">
                 <div>
                   <span className="text-[10px] font-bold text-[#66758A] uppercase tracking-wider block">
                     Status
@@ -928,7 +928,7 @@ export default function MyReportsPage() {
                 <p className="text-[11px] font-bold text-[#66758A] uppercase tracking-wider">
                   Detailed Work Description
                 </p>
-                <p className="text-xs text-[#25344A] mt-1.5 leading-relaxed bg-[#F1EBE0] p-3.5 rounded-xl border border-[#DED5C7] whitespace-pre-wrap">
+                <p className="text-xs text-[#25344A] mt-1.5 leading-relaxed bg-[#EEF6FC] p-3.5 rounded-xl border border-[#D5E5F2] whitespace-pre-wrap">
                   {selectedReport.shortDescription || "No description provided."}
                 </p>
               </div>
@@ -944,7 +944,7 @@ export default function MyReportsPage() {
                     <span>{selectedReport.blockerDependency}</span>
                   </p>
                 ) : (
-                  <p className="text-xs text-[#66758A] mt-1.5 italic bg-[#F1EBE0] p-3 rounded-xl border border-[#DED5C7]">
+                  <p className="text-xs text-[#66758A] mt-1.5 italic bg-[#EEF6FC] p-3 rounded-xl border border-[#D5E5F2]">
                     No blockers reported.
                   </p>
                 )}
@@ -956,11 +956,11 @@ export default function MyReportsPage() {
                   Idle Reason / Support Needed
                 </p>
                 {selectedReport.idleReasonWorkNeeded ? (
-                  <p className="text-xs text-[#25344A] mt-1.5 leading-relaxed bg-[#F1EBE0] p-3.5 rounded-xl border border-[#DED5C7] whitespace-pre-wrap">
+                  <p className="text-xs text-[#25344A] mt-1.5 leading-relaxed bg-[#EEF6FC] p-3.5 rounded-xl border border-[#D5E5F2] whitespace-pre-wrap">
                     {selectedReport.idleReasonWorkNeeded}
                   </p>
                 ) : (
-                  <p className="text-xs text-[#66758A] mt-1.5 italic bg-[#F1EBE0] p-3 rounded-xl border border-[#DED5C7]">
+                  <p className="text-xs text-[#66758A] mt-1.5 italic bg-[#EEF6FC] p-3 rounded-xl border border-[#D5E5F2]">
                     No idle time or additional support required.
                   </p>
                 )}
@@ -972,18 +972,18 @@ export default function MyReportsPage() {
                   Additional Notes
                 </p>
                 {selectedReport.notes ? (
-                  <p className="text-xs text-[#25344A] mt-1.5 leading-relaxed bg-[#F1EBE0] p-3.5 rounded-xl border border-[#DED5C7] whitespace-pre-wrap">
+                  <p className="text-xs text-[#25344A] mt-1.5 leading-relaxed bg-[#EEF6FC] p-3.5 rounded-xl border border-[#D5E5F2] whitespace-pre-wrap">
                     {selectedReport.notes}
                   </p>
                 ) : (
-                  <p className="text-xs text-[#66758A] mt-1.5 italic bg-[#F1EBE0] p-3 rounded-xl border border-[#DED5C7]">
+                  <p className="text-xs text-[#66758A] mt-1.5 italic bg-[#EEF6FC] p-3 rounded-xl border border-[#D5E5F2]">
                     No additional notes.
                   </p>
                 )}
               </div>
 
               {/* Audit Metadata - User ID removed */}
-              <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#66758A] pt-3 border-t border-[#DED5C7]">
+              <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#66758A] pt-3 border-t border-[#D5E5F2]">
                 <span>
                   Mentee: {selectedReport.menteeName || "Mentee"} {menteeEmail ? `(${menteeEmail})` : ""}
                 </span>
@@ -991,12 +991,12 @@ export default function MyReportsPage() {
             </div>
 
             {/* Modal Footer */}
-            <div className="p-4 bg-[#F1EBE0] border-t border-[#DED5C7] flex items-center justify-end gap-2.5">
+            <div className="p-4 bg-[#EEF6FC] border-t border-[#D5E5F2] flex items-center justify-end gap-2.5">
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => setSelectedReport(null)}
-                className="rounded-xl text-xs border-[#DED5C7] bg-[#FFFAF2] text-[#25344A] hover:bg-[#EAE4D8]"
+                className="rounded-xl text-xs border-[#D5E5F2] bg-[#FFFFFF] text-[#25344A] hover:bg-[#E6F1FA]"
               >
                 Close
               </Button>
@@ -1008,13 +1008,13 @@ export default function MyReportsPage() {
                     setSelectedReport(null);
                     handleEdit(rep);
                   }}
-                  className="rounded-xl text-xs bg-[#E87524] hover:bg-[#CB5F16] text-white font-bold flex items-center gap-1.5 shadow-sm shadow-orange-500/20 cursor-pointer"
+                  className="rounded-xl text-xs bg-[#0284C7] hover:bg-[#0369A1] text-white font-bold flex items-center gap-1.5 shadow-sm shadow-sky-500/20 cursor-pointer"
                 >
                   <Pencil className="h-3.5 w-3.5" />
                   Edit This Report
                 </Button>
               ) : (
-                <span className="text-xs text-[#66758A] bg-[#EAE4D8] px-3 py-1.5 rounded-xl border border-[#DED5C7] inline-flex items-center gap-1 font-medium">
+                <span className="text-xs text-[#66758A] bg-[#E6F1FA] px-3 py-1.5 rounded-xl border border-[#D5E5F2] inline-flex items-center gap-1 font-medium">
                   <Lock className="h-3.5 w-3.5" />
                   Edit window expired (15m limit)
                 </span>

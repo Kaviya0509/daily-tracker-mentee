@@ -40,18 +40,6 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --color-canvas: #F5FAFE;
-  --color-sidebar-bg: #E6F1FA;
-  --color-card-bg: #FFFFFF;
-  --color-nested: #EEF6FC;
-  --color-border-subtle: #D5E5F2;
-  --color-primary-sky: #0284C7;
-  --color-hover-sky: #0369A1;
-  --color-main-text: #25344A;
-  --color-muted-text: #66758A;
-  --color-brand-success: #248568;
-  --color-brand-info: #4779C7;
-  --color-brand-error: #C84B50;
   --radius: 0.85rem;
 }
 
